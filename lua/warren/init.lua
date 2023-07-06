@@ -1,4 +1,4 @@
 require("warren.remap")
-require("warren.packer.lua")
+require("warren.packer")
 print("hello from warren")
 
