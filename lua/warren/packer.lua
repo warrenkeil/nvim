@@ -26,6 +26,14 @@ return require('packer').startup(function(use)
     require("toggleterm").setup()
   end}
 
+  -- Commenting
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
+
   -- LSP
   use {
         'VonHeikemen/lsp-zero.nvim',
@@ -47,6 +55,9 @@ return require('packer').startup(function(use)
   {'L3MON4D3/LuaSnip'},     -- Required
   }
 }
+
+  -- Auto close brackets
+  use 'm4xshen/autoclose.nvim'
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
