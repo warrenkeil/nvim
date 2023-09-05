@@ -29,4 +29,5 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "0"
 
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
