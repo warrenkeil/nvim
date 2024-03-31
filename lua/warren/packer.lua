@@ -20,12 +20,14 @@ return require('packer').startup(function(use)
 
   use('mbbill/undotree')
 
-  use('tpope/vim-fugitive')
+  -- use('tpope/vim-fugitive')
 
   use('github/copilot.vim')
   
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
+    require("toggleterm").setup{
+      shell = vim.o.shell,
+    }
   end}
 
   -- Commenting
