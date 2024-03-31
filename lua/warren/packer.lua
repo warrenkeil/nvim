@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
 
   use('tpope/vim-fugitive')
 
-  -- use('github/copilot.vim')
+  use('github/copilot.vim')
   
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
@@ -44,11 +44,11 @@ return require('packer').startup(function(use)
          -- LSP Support
 	  {'neovim/nvim-lspconfig'},             -- Required
 	  {                                      -- Optional
-	  'williamboman/mason.nvim',
-	  run = function()
+	    'williamboman/mason.nvim',
+	    run = function()
 		  pcall(vim.cmd, 'MasonUpdate')
-	  end,
-	 },
+	    end,
+	  },
 	 {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
 	  -- Autocompletion
